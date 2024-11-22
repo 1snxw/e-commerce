@@ -1,0 +1,171 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dcdcdc;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Corrige o layout para que o conteúdo ocupe toda a altura da tela */
+}
+
+/* Header fixo no topo */
+header {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo do header */
+.logo-header img {
+    height: 40px;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Container para as duas caixas (logo e formulário) */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Garante que o container preencha a altura da tela */
+    margin-top: 60px; /* Compensa a altura do header fixo */
+}
+
+/* Caixa com a logo */
+.left-box {
+    background-color: #FFDD00; /* Amarelo */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-box {
+    background-color: #FFDD00; /* Amarelo */
+    width: 90%; /* Ajuste para que fique do tamanho ideal */
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #000; /* Caixa preta ao redor da logo */
+}
+
+.left-box img {
+    max-width: 80%;
+}
+
+/* Caixa com o formulário */
+.right-box {
+    background-color: #000; /* Preto */
+    color: #fff;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Estilo para o título */
+.right-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #FFDD00;
+}
+
+/* Estilos para os campos de input */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+form input::placeholder {
+    font-size: 14px;
+}
+
+/* Estilo para o botão de cadastro */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFDD00; /* Amarelo */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e6b800; /* Tom mais escuro de amarelo */
+}
+
+/* Estilo para o link "Cadastrar-se" */
+.right-box p a {
+    color: #FFDD00; /* Amarelo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-box,
+    .right-box {
+        height: auto;
+        width: 100%;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}

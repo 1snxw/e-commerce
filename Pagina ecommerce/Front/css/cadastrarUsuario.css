@@ -1,0 +1,172 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Garante que o corpo ocupe toda a altura da tela */
+    overflow-x: hidden;
+    /* Previne o scroll horizontal */
+    background-color: #FFDD00;
+}
+
+/* Header fixo no topo */
+header {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo do header */
+.logo-header img {
+    height: 40px;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* Container principal com a altura total disponível */
+.main-content {
+    display: flex;
+    margin-top: 64px; /* Espaço para o header fixo */
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px); /* Preenche o restante da tela abaixo do header */
+}
+
+/* Caixa com a logo (amarela) */
+.left-box {
+    background-color: #FFDD00; /* Amarelo */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Preenche a altura da tela */
+    min-height: 100vh;
+    position: relative;
+}
+
+.left-box img {
+    max-width: 80%;
+    /* Ajusta o tamanho da logo */
+    height: auto;
+}
+
+/* Caixa com o formulário (preto) */
+.right-box {
+    background-color: #000; /* Preto */
+    color: #fff;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* Estilo para o título */
+.right-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #FFDD00; /* Cor amarela para o título */
+}
+
+/* Estilos para os campos de input */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+form input::placeholder {
+    font-size: 14px;
+}
+
+/* Estilo para o botão de cadastro */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFDD00; /* Amarelo */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e6b800; /* Tom mais escuro de amarelo */
+}
+
+/* Estilo para a seção de login */
+.right-box p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.right-box p a {
+    color: #FFDD00;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-box,
+    .right-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}
