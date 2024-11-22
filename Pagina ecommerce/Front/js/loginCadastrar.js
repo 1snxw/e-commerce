@@ -6,24 +6,28 @@ let emailCliente
 
 
 
-function validarFormulario(event){
+function v(event) {
   event.preventDefault()
+
   nomeCliente = document.getElementById('nomeCliente').value
-  sobrenomeCliente = documnet.getElementById('sobrenomeCliente').value
+  sobrenomeCliente = document.getElementById('sobrenomeCliente').value
   cpfCliente = document.getElementById('cpfCliente').value
   telefoneCliente = document.getElementById('telefoneCliente').value
   emailCliente = document.getElementById('emailCliente').value
 
   window.location.href = './cadastrarEndereco.html';
-
 }
+
+// document.getElementById('formCadastro').addEventListener('submit', (e) => { e.preventDefault() })
+
+
 
 function cadastrarEndereco(event) {
   event.preventDefault()
 
   const logrdouro = document.getElementById('logradouro').value
   const numero = document.getElementById('numero').value
-  const complemento = documnet.getElementById('complemento').value
+  const complemento = document.getElementById('complemento').value
   const bairro = document.getElementById('bairro').value
   const localidade = document.getElementById('localidade').value
   const uf = document.getElementById('uf').value
