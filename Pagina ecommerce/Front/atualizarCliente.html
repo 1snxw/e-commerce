@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Cliente</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+            <a href="index.html">
+                <img src="./img/TECHUBbranco.png" alt="Logo TechHub">
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Atualizar Cliente</h2>
+        <form id="form-atualizar">
+            <label for="codCliente">Código Cliente</label>
+            <input type="text" id="codCliente" placeholder="Digite o código do cliente" required>
+
+            <label for="nomeCliente">Nome</label>
+            <input type="text" id="nomeCliente" placeholder="Digite o novo nome do cliente" required>
+
+            <label for="cpfCliente">CPF</label>
+            <input type="text" id="cpfCliente" placeholder="Digite o novo CPF do cliente" maxlength="14" required>
+
+            <button type="submit" id="atualiza">Atualizar</button>
+        </form>
+        <div id="res"></div>
+    </div>
+
+    <script src="js/atualizarCliente.js"></script>
+</body>
+</html>

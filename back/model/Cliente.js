@@ -57,7 +57,8 @@ const Cliente = db.define('cliente', {
     },
     statusCliente:{
             type: DataTypes.STRING(20),
-            allowNull: false
+            allowNull: false,
+            defaultValue:"cliente"
     }
 },{
     tableName: 'clientes',

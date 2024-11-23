@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Clientes - TechHub</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <script src="./js/listarClientes.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+            <a href="index.html">
+                <img src="./img/TECHUBbranco.png" alt="Logo TechHub">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="paginaAdmin.html" class="btn btn-list">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-content">
+            <h1>Listar Clientes</h1>
+            <button id="listarClientesBtn" class="btn btn-large">Listar Clientes</button>
+
+            <div id="res"></div>
+
+            <table id="clientesTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados dos clientes serão exibidos aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+</body>
+</html>
