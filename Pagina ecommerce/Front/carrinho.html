@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub - Carrinho</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./js/cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/TECHUBbranco.png" alt="Logo TechHub">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./produtos.html">Produtos</a></li>
+                    <li><a href="./carrinho.html">Carrinho</a></li>
+                </ul>
+            </nav>
+            <a href="./loginEntrar.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <section class="cart">
+        <h1>Meu Carrinho</h1>
+        <div class="cart-items"></div>
+        <h2>Total: <span id="cart-total">R$ 0,00</span></h2>
+        <button class="finalize-btn" onclick="finalizePurchase()">Finalizar Compra</button>
+    </section>
+
+    <footer>
+        <img src="./img/TECHUBbranco.png" alt="">
+        <p>&copy; 2024 TechHub</p>
+    </footer>
+
+
+</body>
+</html>
