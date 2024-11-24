@@ -4,8 +4,9 @@ let fabricanteInfo = document.getElementById('fabricante-info');
 consultarFabricante.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const idFabricante = document.getElementById('idFabricante').value;
+    const idFabricante = document.getElementById('codFabricante').value;
 
+    // Use a variável correta
     fetch(`http://localhost:3000/fabricante/${idFabricante}`)
         .then(response => response.json())
         .then(fabricante => {

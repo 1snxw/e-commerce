@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Produto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+            <a href="index.html">
+                <img src="./img/TECHUBbranco.png" alt="Logo TechHub">
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Consultar Produto</h2>
+        <form id="form-consultar-produto">
+            <label for="codProdutoConsultar">ID do Produto</label>
+            <input type="number" id="codProduto" placeholder="Digite o ID do produto" required>
+            <button type="submit">Consultar</button>
+        </form>
+        <div id="produto-info"></div>
+    </div>
+
+    <script src="js/consultarProduto.js"></script>
+</body>
+</html>

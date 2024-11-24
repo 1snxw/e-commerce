@@ -4,8 +4,9 @@ const cadastrarFabricante = async(req,res)=>{
     const dados = req.body
     console.log(dados)
     try{
-        const cadastrar = await Fabricante.create(dados, {raw:true})
+        const cadastrar = await Fabricante.create(dados)
         res.status(201).json(cadastrar)
+        console.log(cadastrar)
     }catch(err){
         res.status(500).json({message:"erro ao cadastrar Fabricante"})
         console.log('erro ao cadastrar Fabricante', err)
@@ -13,14 +14,16 @@ const cadastrarFabricante = async(req,res)=>{
 }
 
 const consultarFabricante = async(req,res)=>{
-    const dados = req.query
-    console.log(dados)
-    try{    
-        const consultar = await Fabricante.findOne({where:{codFabricante: dados.codFabricante}})
-        res.status(200).json(consultar)
-    }catch(err){
-        res.status(500).json({message:"erro ao consultar Fabricante"})
-        console.log('erro ao consultar Fabricante', err)
+    const id = req.params.id;
+    try {
+        const fabricante = await Fabricante.findOne({ where: { codFabricante: id } });
+        if (fabricante) {
+            res.status(200).json(fabricante);
+        } else {
+            res.status(404).json({ message: 'Fabricante não encontrado' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Erro no servidor', error });
     }
 }
 

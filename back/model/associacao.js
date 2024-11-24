@@ -107,4 +107,4 @@ Reabastecimento.belongsTo(Estoque, {
 
 
 module.exports = { Cliente, Pedido, Entrega, Pagamento, 
-    ItemPedido, Produto, Estoque, Reabastecimento }
+    Fabricante,ItemPedido, Produto, Estoque, Reabastecimento }

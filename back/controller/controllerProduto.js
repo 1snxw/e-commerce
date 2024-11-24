@@ -12,15 +12,19 @@ const cadastrarProduto = async(req,res)=>{
     }
 }
 
-const consultarProduto = async(req,res)=>{
-    const dados = req.query
-    console.log(dados)
-    try{    
-        const consultar = await Produto.findOne({where:{codProduto: dados.codProduto}})
-        res.status(200).json(consultar)
-    }catch(err){
-        res.status(500).json({message:"erro ao consultar Produto"})
-        console.log('erro ao consultar Produto', err)
+const consultarProduto = async (req, res) => {
+    const id = req.params.id;  // Recebe o ID do produto a partir dos parâmetros da URL
+    try {
+        const produto = await Produto.findOne({ where: { codProduto: id } });
+
+        if (produto) {
+            res.status(200).json(produto);
+        } else {
+
+            res.status(404).json({ message: 'Produto não encontrado' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Erro no servidor', error });
     }
 }
 
